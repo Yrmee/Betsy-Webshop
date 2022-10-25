@@ -33,7 +33,6 @@ class UserProduct(BaseModel):
     owner = CharField()
     product = CharField()
     quantity = IntegerField()
-    tags = ForeignKeyField(Tag, backref="tags_userproduct")
 
 class OrderTransaction(BaseModel):
     date = CharField()

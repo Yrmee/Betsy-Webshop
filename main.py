@@ -14,11 +14,11 @@ def search(term):
     term = term.lower()
     search_query = Product.select().where(Product.name.contains(term) | Product.description.contains(term))
     if search_query:
-        print(f"Products found based on your search term: {term}")
+        print(f"\nProducts found based on your search term: {term}")
         for product in search_query:
             print(f"- {product.name}")
     else:
-        print(f"No products are found for: {term}")
+        print(f"\nNo products are found for: {term}")
 
 
 
@@ -42,11 +42,11 @@ def list_products_per_tag(tag_id):
     """
     products_list_per_tag_query = Product.select().where(Product.tags == tag_id)
     if products_list_per_tag_query:
-        print(f"Products found by tag {tag_id}: ")
+        print(f"\nProducts found by tag: {tag_id} ")
         for product in products_list_per_tag_query:
             print(f"- {product.name}")
     else: 
-        print(f"No products are found with tag: {tag_id}")
+        print(f"\nNo products are found with tag: {tag_id}")
 
 
 
@@ -62,7 +62,7 @@ def add_product_to_user(user_id, product):
             owner = user_id,
             product = product,
             quantity = 1,
-            tags = Product.tags
+            #tags = Product.tags
         )
         print(f"{product} is now added to user {user_id}.")
         return new_product
@@ -152,8 +152,10 @@ def main():
     """
 
     # --> search()
-    #search('weapon')
-    #search('bread')
+    search('weapon')
+    search('bread')
+    search('spaceship')
+    search('star destroyer')
 
 
     # --> list_user_products()
@@ -165,37 +167,47 @@ def main():
     # --> list_products_per_tag()
     #list_products_per_tag('droids')
     #list_products_per_tag('transport')
+    #list_products_per_tag('health')
+    #list_products_per_tag('vader')
 
 
-    # --> add_product_to_user()
+
+    # - User: 'Rey'
+    # --> add_product_to_user() 
     #list_user_products('Rey')
     #add_product_to_user('Rey', 'Mandalorian Armor')
-    list_user_products('Rey')
+    #list_user_products('Rey')
 
-    # --># remove_product_from_user('Rey')
+    # --># remove_product_from_user() 
     #list_user_products('Rey')
     #remove_product_from_user('Mandalorian Armor')
     #list_user_products('Rey')
 
 
-    # --> add_product_to_user('Ben Solo')
+
+    # - User: 'Ben Solo'
+    # --> add_product_to_user() 
     #list_user_products('Ben Solo')
     #add_product_to_user('Ben Solo', 'Millennium Falcon')
     #list_user_products('Ben Solo')
 
-    # --> remove_product_from_user('Ben Solo')
-    list_user_products('Ben Solo')
+    # --> remove_product_from_user()
+    #list_user_products('Ben Solo')
     #remove_product_from_user('Millennium Falcon')
     #list_user_products('Ben Solo')
+
 
 
     # --> update_stock()
     #update_stock('EOPIE', 200)
 
 
+
     # --> purchase_product_between_users()
     #purchase_product_between_users('Polystrarch portion bread', 'Ben Solo', 1)
     #purchase_product_between_users('Lightsaber', 'Rey', 1)
+    #list_user_products('Rey')
+    #list_user_products('Ben Solo')
 
 
     print("\nDatabase Disconnected\n")

@@ -68,7 +68,7 @@ def populate_test_data():
         'quantity': 5,
         'tags': 'droids'},
         {'name': 'Millennium Falcon',
-        'description': 'The Millennium Falcon (492727ZED) is a YT-1300 Corellian light freighter spaceship of the YT-1300f variety.',
+        'description': 'The Millennium Falcon (492727ZED) is a YT-1300 Corellian light freighter transport spaceship of the YT-1300f variety.',
         'price': 16000.00,
         'quantity': 5,
         'tags': 'transport'},
@@ -118,11 +118,11 @@ def populate_test_data():
         {'owner': 'Rey',
         'product': 'Polystrarch portion bread',
         'quantity': 1,
-        'tags': 'food'},
+        },
         {'owner': 'Ben Solo',
         'product': 'Lightsaber',
         'quantity': 1,
-        'tags': 'weapon'},
+        },
     ]
 
     for user_product in user_products:
@@ -130,7 +130,6 @@ def populate_test_data():
             owner = user_product['owner'],
             product = user_product['product'],
             quantity = user_product['quantity'],
-            tags = user_product['tags'],
         )
     
 
