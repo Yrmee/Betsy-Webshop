@@ -88,7 +88,7 @@ def populate_test_data():
         'quantity': 15,
         'tags': 'clothes'},
         {'name': 'Blasters (DH-17 blaster pistol)',
-        'description': 'The standard ranged weapon of both military personnel and civilians in the galaxy, the blaster pistol fires cohesive bursts of light-based energy called bolts. Appearing in a variety of shapes and sizes and sometimes augmented for other functions, including acension guns that fire grappling hooks, blaster pistols deliver a wide range of damage capability. Many blaster pistols have stun settings that incapacitate a target, rather than inflicting physical damage. While blasters do deliver a searing concussive blast, they can be foiled by magnetic seals and deflector shields.',
+        'description': 'The standard ranged weapon of both military personnel and civilians in the galaxy, the blaster pistol fires cohesive bursts of light-based energy called bolts.',
         'price': 75.50,
         'quantity': 890,
         'tags': 'weapon'},
@@ -138,5 +138,5 @@ def populate_test_data():
     print("Test Database Created")
 
 if __name__ == "__main__":
-    #delete_database()
+    delete_database()
     populate_test_data()

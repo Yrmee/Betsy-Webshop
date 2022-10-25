@@ -170,7 +170,7 @@ def main():
     # --> add_product_to_user()
     #list_user_products('Rey')
     #add_product_to_user('Rey', 'Mandalorian Armor')
-    #list_user_products('Rey')
+    list_user_products('Rey')
 
     # --># remove_product_from_user('Rey')
     #list_user_products('Rey')
@@ -184,7 +184,7 @@ def main():
     #list_user_products('Ben Solo')
 
     # --> remove_product_from_user('Ben Solo')
-    #list_user_products('Ben Solo')
+    list_user_products('Ben Solo')
     #remove_product_from_user('Millennium Falcon')
     #list_user_products('Ben Solo')
 
